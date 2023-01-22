@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+.container{
+    position: relative;
+    width:100%;
+    min-height: 100vh;
+    background: #eff0f4;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:50px;
+    padding:50px 25px;
+}
+.drop{
+    position:absolute;
+    width:177px;
+    height:185px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:inset 20px 20px 20px rgba(0,0,0,0.05),
+    25px 35px 20px rgba(0, 0, 0, 0.05),
+    25px 30px 30px rgba(0,0,0,0.05),
+    inset -20px -20px 25px rgba(255,255,255,0.9);
+    right:10px;
+    display:none;
+    top:10px;
+    animation:move-up 6s, radius 6s;
+}
+.drop:nth-child(1){
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+.drop:nth-child(2){
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+@keyframes move-up{
+    from{top:-200px;}
+    to{top:150;}
+}
+@keyframes radius{
+    0%{  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;}
+    50%{ border-radius: 74% 26% 20% 80% / 38% 37% 63% 62%;}
+    100%{ border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;}
+}
+.drop .content{
+    align-items: center;
+    gap:15px;
+    text-align: center;
+    padding-inline: 36px;
+}
+.drop .content .warning{
+    padding:10px;
+    background: var(--color);
+    color:#fff;
+    border-radius: 50%;
+    font-size:25px;
+    margin-bottom: 10px;
+}
+.drop .content .success{
+    padding:10px;
+    background: var(--color);
+    color:#fff;
+    border-radius: 50%;
+    font-size:25px;
+    margin-bottom: 10px;
+}
+p{
+    font-size:14px;
+    font-weight: 600;
+}
+.drop .content a{
+    position: absolute;
+    padding:5px;
+    color:var(--color);
+    font-weight:500;
+    text-decoration: none;
+    opacity:0.7;
+    transition:0.5s;
+    top:0;
+    right:26px;
+    height:36px;
+    width:29px;
+    font-size:25px;
+}
+.drop .content a:hover{
+    cursor:pointer;
+    opacity:1;
+}
+button{
+    padding:15px 20px;
+    background: #ff0f5b;
+    border-radius:10px;
+    font-weight: 600;
+    color:#fff;
+    border:none;
+    cursor: pointer;
+    width:150px;
+    font-size:17px;
+    box-shadow:rgba(0,0,0,0.24) 0px 3px 8px;
+}
+.btn{
+    padding:15px 20px;
+    background: #0f59ff;
+    border-radius:10px;
+    font-weight: 600;
+    color:#fff;
+    border:none;
+    cursor: pointer;
+    width:150px;
+    font-size:17px;
+    box-shadow:rgba(0,0,0,0.24) 0px 3px 8px;
+}
